@@ -1,0 +1,67 @@
+.navbarContainer {
+  height: 100px;
+  background: #3C4048;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* flex-wrap: wrap; */
+}
+.navbarLeft {
+  flex: 1;
+}
+.logoImg {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  overflow: hidden;
+  margin-left: 10px;
+}
+.navbarCenter {
+  flex: 4.5;
+}
+.navbarCenterIcons {
+  font-size: 25px !important;
+  line-height: 0;
+  vertical-align: middle;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 700;
+  /* margin-left: 3px; */
+  cursor: pointer;
+}
+.navbarCenterList {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  list-style: none;
+}
+.navbarListCeterItems {
+  font-weight: 400;
+  font-size: 16px;
+  color: #fff;
+}
+.navbarRight {
+  flex: 0.6;
+  margin-left: 30px;
+}
+.navRightList {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+.navRightListIcons {
+  font-size: 55px !important;
+  padding: 15px;
+  justify-content: space-evenly;
+  color: #fff;
+  cursor: pointer;
+  /* line-height: 0; */
+  /* vertical-align: middle; */
+  /* font-family: "Font Awesome 5 Free"; */
+  /* font-weight: 700; */
+}
+
+@media(max-width:990px){
+  .navbarCenter{
+  visibility: hidden;
+  }
+}

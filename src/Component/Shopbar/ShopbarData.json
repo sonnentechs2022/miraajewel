@@ -1,0 +1,61 @@
+{
+  "resources": [
+    {
+      "title": "Find me on Mastodon",
+      "link": "",
+      "imageUrl": "https://placeimg.com/300/300/animals"
+    },
+    {
+      "title": "Welcome to Ark Labs",
+      "link": "",
+      "imageUrl": "https://placeimg.com/300/300/animals"
+    },
+    {
+      "title": "Some sort of third title",
+      "link": "",
+      "imageUrl": "https://placeimg.com/300/300/architecture"
+    },
+    {
+      "title": "Some sort of third title",
+      "link": "",
+      "imageUrl": "https://placeimg.com/300/300/architecture"
+    },
+    {
+      "title": "Some sort of third title",
+      "link": "",
+      "imageUrl": "https://placeimg.com/300/300/architecture"
+    },
+    {
+      "title": "Some sort of third title",
+      "link": "",
+      "imageUrl": "https://placeimg.com/300/300/architecture"
+    },
+    {
+      "title": "Some sort of third title",
+      "link": "",
+      "imageUrl": "https://placeimg.com/300/300/architecture"
+    },
+    {
+      "title": "Some sort of third title",
+      "link": "",
+      "imageUrl": "https://placeimg.com/300/300/architecture"
+    }
+  ],
+  "offer": [
+    {
+      "title": "Find me on Mastodon",
+      "link": "",
+      "imageUrl": "https://placeimg.com/300/300/architecture"
+    },
+    {
+      "title": "Welcome to Ark Labs",
+      "link": "",
+      "imageUrl": "https://placeimg.com/300/300/animals"
+    },
+    {
+      "title": "Some sort of third title",
+      "link": "",
+      "imageUrl": "https://placeimg.com/300/300/architecture"
+    }
+  ]
+}

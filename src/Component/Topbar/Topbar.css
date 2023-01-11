@@ -1,0 +1,19 @@
+.topbarContainer{
+  /* top: 0; */
+  height: 35px;
+  background-color: #ffdde4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.topbarText{
+  font-size: 17px;
+  color: #000;
+  font-weight: 500;
+  font-family: "Nunito";
+  letter-spacing: 1px;
+
+
+}

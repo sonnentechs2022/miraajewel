@@ -2,17 +2,17 @@ import { useRef, useState } from "react";
 import Logo from "../Assets/PartnerImg/Miraa.png";
 import RightImg from "../Assets/OfferImages/product77.webp";
 import FormInput from "./FormInput";
-// import { useNavigate } from "react-router-dom";
+import {useNavigate} from 'react-router-dom'
 
 export default function SignUpScreen() {
-  // const navigate = useNavigate();
   const [values, setValues] = useState({
     username: "",
     email: "",
-    contact:"",
+    contact:" ",
     password: "",
     confirmPassword: "",
   });
+  const Navigate =useNavigate();
 
   const inputs = [
     {
@@ -39,13 +39,14 @@ export default function SignUpScreen() {
       id: 3,
       name: "Contact",
       type: "text",
-      placeholder: "Contact No.",
-      errorMessage: "It should be a valid Mobile no.!",
-      label: "Contact",
+      placeholder: "Contact No...",
+      errorMessage: "Please provide valid phone number",
+      label: "Contact No",
       pattern:"^([6-9]{1})([0-9]{4})([0-9]{5})$",
-      maxlength:"10",
-      required: true
+      required: true,
+      maxlength:10
     },
+
     {
       id: 4,
       name: "password",
@@ -103,16 +104,15 @@ export default function SignUpScreen() {
                           onChange={onChange}
                         />
                       ))}
-
                       <div className="text-center pt-1 mb-12 pb-1">
                         <button
                           className="inline-block px-6 py-2.5 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full mb-3 none bg-gradient-to-r from-amber-500 to-pink-500"
                           type="button"
                           data-mdb-ripple="true"
                           data-mdb-ripple-color="light"
-                          
+                          onClick={()=>Navigate('/MobileNumScreen')}
                         >
-                          Sign Up
+                          Sign IN
                         </button>
                       </div>
                     </form>

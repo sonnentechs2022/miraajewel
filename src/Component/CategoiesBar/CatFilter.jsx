@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-// import InputRange from "react-input-range";
+
 
 import { FilterInfo } from "./Categoriesbar";
 

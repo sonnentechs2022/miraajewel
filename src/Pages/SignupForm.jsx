@@ -6,7 +6,7 @@ export default function SignupForm() {
   const [values, setValues] = useState({
     username: "",
     email: "",
-    birthday: "",
+    
     password: "",
     confirmPassword: "",
   });
@@ -32,9 +32,18 @@ export default function SignupForm() {
       label: "Email",
       required: true,
     },
-
     {
       id: 3,
+      name: "Contact",
+      type: "number",
+      placeholder: "Contact No...",
+      errorMessage: "",
+      label: "Contact No",
+      pattern:` /^[6-9]{1}[0-9]{9}$/`,
+      required: true,
+    },
+    {
+      id: 4,
       name: "password",
       type: "password",
       placeholder: "Password",
@@ -45,7 +54,7 @@ export default function SignupForm() {
       required: true,
     },
     {
-      id: 4,
+      id: 5,
       name: "confirmPassword",
       type: "password",
       placeholder: "Confirm Password",

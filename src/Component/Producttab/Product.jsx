@@ -126,10 +126,8 @@ export default function Product() {
               {" "}
               Rs. 8000{" "}
             </p>
-            <hr className=" w-20 h-[3px] mt-3 rotate-6  absolute bg-red-500 ml-[110px] t-0" />
+            <hr className=" w-20 h-[3px] mt-3 rotate-6  absolute bg-red-500 ml-[110px] t-0 -z-10" />
           </h1>
-
-          {/* <hr className=" w-12 mb-20  bg-red-500" /> */}
 
           <div className="flex mt-8">
             <div className="flex items-center justify-center">

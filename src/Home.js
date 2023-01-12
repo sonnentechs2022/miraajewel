@@ -17,6 +17,8 @@ import ScrollToTop from "./ScrollToTop";
 import Billingtab from "./Component/BillingTab/Billingtab";
 import CardPay from "./Component/BillingTab/CardPay";
 import TermCon from "./Component/TermsRefund/TermCon.jsx";
+import OTPScreen from "./Pages/OTPScreen";
+import MobileNumScreen from "./Pages/MobileNumScreen";
 
 export default function Home() {
   const [data, setData] = useState([]);
@@ -48,8 +50,10 @@ export default function Home() {
             path="/Categoriesbar"
             element={<Categoriesbar handler={data} />}
           />
-          <Route path="/Product" element={<Product />} />
 
+          <Route path="/Product" element={<Product />} />
+          <Route path="/OTPScreen" element={<OTPScreen />} />
+          <Route path="/MobileNumScreen" element={<MobileNumScreen />} />
           <Route path="/Login" element={<LoginScreen />} />
           <Route path="/SignUp" element={<SignUpScreen />} />
           <Route path="/TermCon" element={<TermCon />} />

@@ -53,7 +53,7 @@ export default function MaganifyImg({
           // close magnifier
           setShowMagnifier(false);
         }}
-        alt={"img"}
+        alt={"magnify"}
       />
 
       <div

@@ -9,9 +9,9 @@ export default function () {
         <div className=" flex flex-col justify-center items-center h-[400px]  shadow-2xl lg:h-[500px]">
           <form action="">
             <div className="flex flex-col justify-center items-center w-[300px] lg:w-[500px]   ">
-              <h1 className="text-[23px] font-bold ">Verify Your </h1>
-              <h1 className="text-[23px] font-bold mb-[10px] ">Phone Number</h1>
-              <p className="text-[14px] font-medium text-gray-400 mb-[50px] ">
+              <h1 className="text-[23px] font-bold font-Montserrat">Verify Your </h1>
+              <h1 className="text-[23px] font-bold mb-[10px] font-Montserrat">Phone Number</h1>
+              <p className="text-[14px] font-medium text-gray-400 mb-[50px] font-Montserrat">
                 Enter Your OTP code here
               </p>
             </div>
@@ -42,10 +42,10 @@ export default function () {
               />
             </div>
             <div className="flex flex-col justify-center items-center">
-              <p className="text-[14px] font-medium text-gray-400 mb-[20px] ">
+              <p className="text-[14px] font-medium text-gray-400 mb-[20px] font-Montserrat ">
                 Didn't you Recive any Code?
               </p>
-              <h1 className="text-[13px] font-bold text-red-600 uppercase">
+              <h1 className="text-[13px] font-bold text-red-600 uppercase font-Montserrat">
                 Resend New Code
               </h1>
             </div>

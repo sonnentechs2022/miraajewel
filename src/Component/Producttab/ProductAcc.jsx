@@ -17,7 +17,7 @@ export default function ProductAcc({ Brand, Color, Head, id }) {
             key={id}
           >
             <div className="flex justify-between  items-center  h-[35px]">
-              <h1 className="text-black font-semibold text-lg hover:text-blue-500 transition ease-in-out duration-500">{Head}</h1>
+              <h1 className="text-black font-semibold font-Montserrat text-lg hover:text-blue-500 transition ease-in-out duration-500">{Head}</h1>
               <div className=" ">
                 {isActive ? (
                   <KeyboardArrowUp className=" cursor-pointer" />
@@ -28,11 +28,11 @@ export default function ProductAcc({ Brand, Color, Head, id }) {
             </div>
             {isActive && (
               <div className=" ">
-                <div className=" flex flex-row mt-2 text-[15px] font-semibold">
-                  Brand:<p className="ml-2 text-[14px] font-medium">{Brand}</p>
+                <div className=" flex flex-row mt-2 text-[15px] font-semibold font-Montserrat">
+                  Brand:<p className="ml-2 text-[14px] font-medium font-Montserrat">{Brand}</p>
                 </div>
-                <div className=" flex flex-row mt-2 text-[15px] font-semibold">
-                  Color:<p className="ml-2 text-[14px] font-medium">{Color}</p>
+                <div className=" flex flex-row mt-2 text-[15px] font-semibold font-Montserrat">
+                  Color:<p className="ml-2 text-[14px] font-medium font-Montserrat">{Color}</p>
                 </div>
               </div>
             )}

@@ -8,105 +8,96 @@ import PromiseImg from "../../Assets/OfferImages/promises-min (1).jpg";
 import ProductCate from "../ProductCategories/ProductCate";
 // import Testimonial2 from "../Testimonial/Testimonial2";
 import Testimonial from "../Testimonial/Testimonial";
-import Dealbar from "../DealBar/Dealbar";
+
 import Trending from "../TrendingDeal/Trending";
+import Collection from "../Collection/Colection";
+import DealBar from "../DealDayBar/DealBar";
+import ShopColor from "../ShopByColor/ShopColor";
+import Banner from "../BannerBar/Banner";
 
 export default function Shopbar() {
-  const slideLeft = () => {
-    var slider = document.getElementById("slider");
-    slider.scrollLeft = slider.scrollLeft - 500;
-  };
-  const slideLeft2 = () => {
-    var slider = document.getElementById("slider2");
-    slider.scrollLeft = slider.scrollLeft - window.innerWidth;
-    // setTimeout(slideLeft2, 2000);
-  };
+  const [bgImages, setBgImages] = useState(0);
+  const bgImf = [
+    {
+      bg: require("../../Assets/OfferImages/38New Arrivals.png"),
+    },
+    {
+      bg: require("../../Assets/OfferImages/626New Year.png"),
+    },
 
-  const slideRight = () => {
-    var slider = document.getElementById("slider");
-    slider.scrollLeft = slider.scrollLeft + 500;
-  };
-  const slideRight2 = () => {
-    var slider = document.getElementById("slider2");
-    slider.scrollLeft = slider.scrollLeft + window.innerWidth;
-    // setTimeout(slideRight2, 7000);
-  };
+    {
+      bg: require("../../Assets/OfferImages/267Grand Opening.png"),
+    },
+  ];
 
+  const handleChange = () => {
+    setTimeout(() => {
+      bgImages === 2 ? setBgImages(0) : setBgImages(bgImages + 1);
+    }, 3000);
+  };
+  const handleOnClickleft = () => {
+    bgImages < 1 ? setBgImages(2) : setBgImages(bgImages - 1);
+  };
+  const handleOnClickRight = () => {
+    bgImages === 2 ? setBgImages(0) : setBgImages(bgImages + 1);
+  };
   useEffect(() => {
-    const interval = setInterval(() => {
-      slideRight2();
-    }, 2000);
-
-    return () => clearInterval(interval);
-  }, []);
-  useEffect(() => {
-    const interval = setInterval(() => {
-      slideLeft2();
-    }, 6000);
-
-    return () => clearInterval(interval);
-  }, []);
+    handleChange();
+  }, [bgImages]);
 
   return (
     <>
-      <div className="  align-middle flex   items-center  ">
-        <KeyboardArrowLeft
-          className="opacity-50 cursor-pointer hover:opacity-100 hover:text-xl"
+      <div className=" flex flex-row items-center">
+        {/* <KeyboardArrowLeft
+          className="opacity-50 cursor-pointer hover:opacity-100 mt-[130px] "
           size={40}
-          onClick={slideLeft2}
+          onClick={handleOnClickleft}
+        /> */}
+        <img
+          src={bgImf[bgImages]?.bg}
+          className="h-[180px] lg:h-[400px] w-screen transition  duration-200 ease-in-out "
         />
-        <div
-          id="slider2"
-          className="aspect-w-16 aspect-h-9  overflow-x-scroll scroll  scroll-smooth whitespace-nowrap overflow-auto scrollbar-hide"
-        >
-          {OFFERIMG.map((item) => {
-            return (
-              <img
-                src={item.image}
-                alt=""
-                className="w-full h-[170px] lg:h-[350px]  object-fill inline-block  cursor-pointer "
-                id="OfferSlider"
-              />
-            );
-          })}
-        </div>
-        <ChevronRight
-          className="opacity-50 cursor-pointer hover:opacity-100 "
+        {/* <ChevronRight
+          className="opacity-50 cursor-pointer hover:opacity-100 mt-[130px] "
           size={30}
-          onClick={slideRight2}
-        />
+          onClick={handleOnClickRight}
+        /> */}
       </div>
 
-      <div className="carousel my-8 ">
-        <h1 className="flex  text-[30px] font-bold content-center justify-center mt- mb-5 font-Nunito">
+      <div className="carousel lg:my-8">
+        <h1 className="flex text-[24px]  lg:text-[30px]  content-center justify-center mt-3 mb-2  lg:mb-5 font-Montserrat">
           Popular Categories
         </h1>
         <div className="relative flex items-center">
-          <KeyboardArrowLeft
+          {/* <KeyboardArrowLeft
             className="opacity-50 cursor-pointer hover:opacity-100 "
             size={40}
             onClick={slideLeft}
-          />
+          /> */}
           <NavLink to="/Categoriesbar">
             <div
               id="slider"
-              className="  relative overflow-x-scroll scroll  scroll-smooth whitespace-nowrap overflow-auto scrollbar-hide"
+              className=" w-full grid grid-cols-7 grid-row-1 gap-1 lg:gap-3 lg:pl-1 lg:pr-1 rounded"
             >
-              {PRODUCT.map((item,index) => {
+              {PRODUCT.map((item, index) => {
                 return (
                   <>
-                    <div className=" inline-block relative  hover:scale-105 ease-in-out duration-300 hover:shadow-xl ">
+                    <div className="   hover:scale-105 ease-in-out duration-300 hover:shadow-xl ">
                       <img
-                        className="  w-[70px] h-[70px] lg:w-[170px] lg:h-[170px]  object-cover group-active:hidden p-0.5  lg:p-1.5 cursor-pointer  rounded-xl "
+                        className="  w-[80px] h-[80px] lg:w-[178px] lg:h-[170px]  object-cover group-active:hidden  cursor-pointer   "
                         src={item.image}
                       />
-                      <div className="flex justify-center items-center absolute w-[65px] h-[25px] ml-[3px] lg:w-[157px] bottom-[3px] lg:bottom-[6px] lg:ml-[6.5px] bg-gray-600 bg-opacity-60  lg:h-[45px] rounded-b-md object-cover">
-                      <h3
-                        className=" text-[13px] lg:text-md text-white font-bold  "
-                        key={index}
-                      >
-                        {item.price}
-                      </h3>
+                      <div className="flex  flex-col justify-center items-center  w-[51px] h-[40px]  lg:w-[170px] bottom-[3px] lg:bottom-[2px]  bg- bg-white  lg:h-[60px] border-[2px] object-cover">
+                        <h3
+                          className=" text-[10px] lg:text-[13px]  text-RedPrime lg:text-md  font-Montserrat  "
+                          key={index}
+                        >
+                          {item.price}
+                        </h3>
+                        <p className=" text-[13px] lg:text-[18px] font-medium text-gray-800 font-Montserrat hidden lg:block">
+                          Explore
+                          <ChevronRight className=" h-[10px] lg:text-[18px] font-thin text-gray-800" />
+                        </p>
                       </div>
                     </div>
                   </>
@@ -114,19 +105,22 @@ export default function Shopbar() {
               })}
             </div>
           </NavLink>
-          <ChevronRight
+          {/* <ChevronRight
             className="opacity-50 cursor-pointer hover:opacity-100 "
             size={30}
             onClick={slideRight}
-          />
+          /> */}
           <Outlet />
         </div>
         <div className="h-full w-full  mt-5">
           <img src={PromiseImg} alt="" />
         </div>
-        <ProductCate />
-        <Dealbar />
+        {/* <ProductCate /> */}
+        <DealBar />
+        <Collection />
         <Trending />
+        <ShopColor />
+        <Banner />
         <Testimonial />
       </div>
     </>

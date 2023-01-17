@@ -1,8 +1,9 @@
 import { Route, Routes, BrowserRouter } from "react-router-dom";
 import { useState, useEffect } from "react";
 // import  Navtab  from "./Component/Navtab/Navtab.jsx";
-import Topbar from "./Component/Topbar/Topbar";
+
 import Navtab2 from "./Component/Navtab/Navtab2";
+import Topbar from "./Component/Topbar/Topbar";
 import Shopbar from "./Component/Shopbar/Shopbar.jsx";
 import Categoriesbar from "./Component/CategoiesBar/Categoriesbar";
 import Product from "./Component/Producttab/Product.jsx";
@@ -56,7 +57,7 @@ export default function Home() {
           <Route path="/MobileNumScreen" element={<MobileNumScreen />} />
           <Route path="/Login" element={<LoginScreen />} />
           <Route path="/SignUp" element={<SignUpScreen />} />
-          <Route path="/TermCon" element={<TermCon />} />
+          <Route path="/TermPolicy" element={<TermPolicy />} />
         </Routes>
         <Footertab />
       </BrowserRouter>

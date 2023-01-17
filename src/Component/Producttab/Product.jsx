@@ -103,11 +103,11 @@ export default function Product() {
           <div className="lg:flex items-center hidden ">
             <Home className="text-gray-500 text-sm" />
             <ChevronRight className="text-gray-500 text-sm" />
-            <p className="text-gray-500 text-sm">Shop by Category</p>
+            <p className="text-gray-500 text-sm font-Montserrat">Shop by Category</p>
             <ChevronRight className="text-gray-500 text-sm" />
-            <p>Rings</p>
+            <p className="font-Montserrat">Rings</p>
           </div>
-          <h1 className="mt-10 text-[25px] lg:text-[30px] font-bold">
+          <h1 className="mt-10 text-[25px] lg:text-[30px] font-bold font-Montserrat">
             Multi Diamond Ring For Men
           </h1>
           <div className="mt-3 flex flex-row items-center">
@@ -116,13 +116,13 @@ export default function Product() {
             <StarRate className=" text-orange-300 text-sm" />
             <StarRate className=" text-orange-300 text-sm" />
             <StarRate className=" text-orange-300 text-sm" />
-            <p className="ml-2">(4 Reviews)</p>
+            <p className="ml-2 font-Montserrat">(4 Reviews)</p>
           </div>
-          <p className="text-gray-500 text-sm mt-3">SKU: av102200</p>
+          <p className="text-gray-500 text-sm mt-3 font-Montserrat">SKU: av102200</p>
 
-          <h1 className=" flex flex-row text-red-500 text-2xl font-bold  ">
+          <h1 className=" flex flex-row text-red-500 text-2xl font-bold font-Montserrat  ">
             Rs. 4000{" "}
-            <p className="ml-4 text-xl font-semibold text-red-500 ">
+            <p className="ml-4 text-xl font-semibold text-red-500 font-Montserrat ">
               {" "}
               Rs. 8000{" "}
             </p>
@@ -152,14 +152,14 @@ export default function Product() {
 
             <div className=" w-[140px] lg:w-[220px] h-[40px] lg:h-[45px] bg-blue-600 ml-5 flex items-center justify-center rounded-md cursor-pointer hover:shadow-md hover:scale-105 ease-in-out duration-300">
               <LocalMall className=" text-white " />
-              <p className=" text-white font-bold text-[13px] lg:text-lg ">
+              <p className=" text-white font-bold text-[13px] lg:text-lg font-Montserrat ">
                 Add to Cart
               </p>
             </div>
 
             <NavLink to="/CartPage">
               <div className=" w-[80px] lg:w-[150px] h-[40px] lg:h-[45px] bg-blue-600 ml-2 flex items-center justify-center rounded-md hover:shadow-md hover:scale-105 ease-in-out duration-300">
-                <p className=" text-white font-bold text-[14px] lg:text-lg ">
+                <p className=" text-white font-bold text-[14px] lg:text-lg font-Montserrat ">
                   Buy Now
                 </p>
               </div>
@@ -167,7 +167,7 @@ export default function Product() {
           </div>
           <div className=" w-11/12 h-[50px] bg-blue-600  flex items-center justify-center rounded-md mt-5 hover:shadow-md cursor-pointer hover:scale-105 ease-in-out duration-300">
             <FavoriteBorder className=" text-white mr-1" />
-            <p className=" text-white font-bold text-md ">Add to Watchlist</p>
+            <p className=" text-white font-bold text-md font-Montserrat ">Add to Watchlist</p>
           </div>
 
           <img
@@ -187,7 +187,7 @@ export default function Product() {
           })}
         </div>
       </div>
-      <div className="flex justify-center items-center h-full mt-5 lg:mt-0">
+      <div className="flex justify-center items-center h-full mt-5 lg:mt-0 font-Montserrat">
         Reviews
       </div>
       <div className=" justify-center itmes-center h-full hidden lg:flex">
@@ -199,9 +199,9 @@ export default function Product() {
       <div className="flex flex-col lg:flex-row lg:justify-center lg:items-center w-full h-auto">
         <div className=" flex flex-col justify-center items-start w-4/12 ml-[20px] ">
           <div className="flex justify-center items-center">
-            <h1 className=" text-blue-500 text-[50px]  font-bold">5.0</h1>
+            <h1 className=" text-blue-500 text-[50px]  font-bold font-Montserrat">5.0</h1>
             <div className="ml-[15px]">
-              <p className=" text-gray-500">Average Rating</p>
+              <p className=" text-gray-500 font-Montserrat">Average Rating</p>
               <div className=" flex justify-center items-center">
                 {a.map((i) => {
                   return <li className=" list-none">{i}</li>;
@@ -210,7 +210,7 @@ export default function Product() {
             </div>
           </div>
           <div className=" flex justify-center items-center bg-gray-800 w-[140px] lg:w-5/12 h-[40px] lg:h-[50px] rounded-sm mb-[100px]">
-            <p className=" uppercase text-white font-semibold lg:font-bold text-[13px]  ">
+            <p className=" uppercase text-white font-semibold lg:font-bold text-[13px] font-Montserrat ">
               Submit Review
             </p>
           </div>
@@ -229,10 +229,10 @@ export default function Product() {
                 })}
               </div>
               <p className=" text-[14px] font-medium mt-1">
-                <p className=" text-gray-400">By</p> Sawan Mahajan{" "}
-                <p className=" text-gray-400">on</p>2022/12/03
+                <p className=" text-gray-400 font-Montserrat">By</p> Sawan Mahajan{" "}
+                <p className=" text-gray-400 font-Montserrat">on</p>2022/12/03
               </p>
-              <h1 className=" text-[14px] text-gray-500 mt-1">Good Product</h1>
+              <h1 className=" text-[14px] text-gray-500 mt-1 font-Montserrat">Good Product</h1>
             </div>
           </div>
           <hr className=" w-full  h-[1px] mt-10 lg:mt-[50px]  lg:mb-[50px] bg-gray-200" />

@@ -10,6 +10,7 @@ export default function Billingtab() {
     hideForm === "0px" ? setHideForm("650px") : setHideForm("0px");
   };
 
+  
   // hideCard === "300px" ? setHideForm("0px") : setHideForm("300px") ;
 
   return (
@@ -149,7 +150,7 @@ export default function Billingtab() {
                     <div>
                       <img
                         src="https://source.unsplash.com/user/erondu/1600x900"
-                        alt="image"
+                        alt=""
                         className="w-60"
                       />
                     </div>
@@ -179,7 +180,7 @@ export default function Billingtab() {
                     <div>
                       <img
                         src="https://source.unsplash.com/collection/190727/1600x900"
-                        alt="image"
+                        alt=""
                         className="w-60"
                       />
                     </div>

@@ -1,41 +1,49 @@
 import React, { useState } from "react";
-import { FavoriteBorder } from "@mui/icons-material";
+import { FavoriteBorder, Favorite } from "@mui/icons-material";
 
-export default function TrendingItems({ img, price, review, rating }) {
+import data from "../../data";
+
+export default function TrendingItems({ img, Price, review, rating,title,offerPrice }) {
   const [changeStyle, setChangeStyle] = useState({
     height: "0px",
     opacity: "0",
   });
+  const [iconChange, setIconChange] = useState(false);
 
-  const handleOver = () => {
-    setChangeStyle({ height: "40px", opacity: "1" });
-  };
-
-  const handleOut = () => {
-    setChangeStyle({ height: "0px", opacity: "0" });
-  };
+  const toggleChecked = () => setIconChange((value) => !value);
 
   return (
     <>
-      <div
-        className="flex-col justify-center items-center"
-        onMouseOver={handleOver}
-        onMouseOut={handleOut}
-      >
-        <div className="relative flex justify-center items-center overflow-hidden bg-no-repeat bg-cover h-[200px] lg:h-[300px]">
-          <img src={img} alt="" className=" object-contain"/>
-          <div className="absolute top-[50px] mr-[150px]  w-[80px] h-[20px] bg-blue-600 text-[10px] text-white font-medium flex justify-center items-center uppercase font-Nunito ">
-            Best Saller
+      <div className="inline-block">
+        
+        <div className="relative flex justify-center items-center  flex-col overflow-hidden bg-no-repeat bg-cover h-[200px] lg:h-[300px]">
+          <img src={img} alt="" className=" object-fill mt-24 lg:mt-0 lg:h-60 h-[175px]" />
+          <div className="absolute top-[70px] lg:top-[50px] mr-[80px] lg:mr-[140px]  w-[70px] h-[20px] bg-RedPrime text-[8px]  flex justify-center items-center  ">
+            <h1 className="text-white  uppercase font-Montserrat">Best Saller</h1>
           </div>
-          <div
-            className="absolute top-[160px] lg:top-[260px] ml-[40px] w-[200px] lg:w-[240px] h-[0px] bg-blue-600 text-[12px] text-white font-semibold cursor-pointer flex justify-center items-center uppercase opacity-0 transition-all"
-            style={{ height: changeStyle.height, opacity: changeStyle.opacity }}
-          >
-            <FavoriteBorder className="mr-2 font-Nunito" />
-            Add to Watchlist
+          <div className="absolute top-[160px] lg:top-[195px]  w-[110px] lg:w-[170px] h-[60px] text-[10px]  lg:text-[12px] text-RedPrime font-Montserrat cursor-pointer flex justify-between items-center uppercase  transition-all">
+            (13Review)
+            <div>
+              {iconChange == 0 ? (
+                <FavoriteBorder
+                  className=" text-[10px] lg:text-[13px] text-RedPrime "
+                  onClick={toggleChecked}
+                />
+              ) : (
+                <Favorite className=" text-[10px] lg:text-[13px] text-RedPrime" />
+              )}
+            </div>
+          </div>
+          <div className=" relative flex justify-center items-center flex-col w-[50px] text-center font-Montserrat mt-[15px] ">
+            {title}
+            <div className="flex justify-between gap-8 items-center flex-row mt-[7px]">
+              <p className=" font-Montserrat text-[15px] ">Rs.{offerPrice}</p>
+              <p className=" font-Montserrat text-[15px]  text-gray-500">RS.{Price}</p>
+              <hr className=" absolute ml-[87px] h-[2px] w-[70px] bg-gray-700 t-0" />
+            </div>
           </div>
         </div>
-        <div className=" flex justify-center items-center">
+        {/* <div className=" flex justify-center items-center">
           {rating.map((i) => {
             return <li className=" list-none">{i}</li>;
           })}
@@ -50,7 +58,7 @@ export default function TrendingItems({ img, price, review, rating }) {
           <p className="ml-2 text-gray-900 text-[15px] font-medium font-Nunito">
             Rs.{price}
           </p>
-        </div>
+        </div> */}
       </div>
     </>
   );

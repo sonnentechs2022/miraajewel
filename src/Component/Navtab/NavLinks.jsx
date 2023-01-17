@@ -12,26 +12,20 @@ const NavLinks = () => {
         <div>
           <div className="px-1 text-left md:cursor-pointer group">
             <h1
-              className="py-7 flex justify-between items-center md:pr-0 pr-5 group text-[15px] ml-5 font-Nunito font-medium "
+              className="py-7 flex justify-between items-center md:pr-0 pr-5 group text-[15px] ml-5 font-Montserrat font-medium "
               onClick={() => {
                 heading !== link.name ? setHeading(link.name) : setHeading("");
                 setSubHeading("");
               }}
             >
               {link.name}
-              <span className="text-xl md:hidden inline">
-                <ion-icon
-                  name={`${
-                    heading === link.name ? "chevron-up" : "chevron-down"
-                  }`}
-                ></ion-icon>
-              </span>
-              <span className="text-xl md:mt-1 md:ml-2  md:block hidden group-hover:rotate-180 group-hover:-mt-2">
+             
+              <span className="text-xl md:mt-1 md:ml-2  md:block hidden hover:rotate-180  ease-in-out duration-300">
                 <KeyboardArrowDown />
               </span>
             </h1>
             {link.submenu && (
-              <div className="transition delay-10000 ease-in-out">
+              <div className="transition delay-300 ease-in-out">
                 <div className="absolute top-20 hidden group-hover:md:block hover:md:block shadow-2xl ">
                   <div className="py-3">
                     <div
@@ -42,11 +36,11 @@ const NavLinks = () => {
                   <div className="bg-white p-5 grid grid-cols-3 gap-10 ">
                     {link.sublinks.map((mysublinks) => (
                       <div>
-                        <h1 className="text-lg font-semibold font-Nunito">
+                        <h1 className="text-lg  font-Montserrat Next LT Pro">
                           {mysublinks.Head}
                         </h1>
                         {mysublinks.sublink.map((slink) => (
-                          <li className="text-[14px] font-medium text-gray-600 my-2.5 font-Nunito">
+                          <li className="text-[14px] font-medium text-gray-600 my-2.5 font-Montserrat">
                             <Link
                               to={slink.link}
                               className="hover:text-primary"

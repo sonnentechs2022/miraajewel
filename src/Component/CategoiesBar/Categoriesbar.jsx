@@ -5,18 +5,23 @@ import { Link, NavLink } from "react-router-dom";
 import { keys } from "@mui/system";
 import FilterImg from "../../Assets/PaymentOption/FilterImg.png";
 import CatFilter from "./CatFilter";
+import { FavoriteBorder, Favorite } from "@mui/icons-material";
 
 export const FilterInfo = createContext();
 
 export default function Categoriesbar({ handler }, props) {
-  
   const [filterColor, setFilterColor] = useState();
   const [wData, setWData] = useState("0px");
 
+  const [changeStyle, setChangeStyle] = useState({
+    height: "0px",
+    opacity: "0",
+  });
+  const [iconChange, setIconChange] = useState(false);
 
-  console.log(filterColor)
+  const toggleChecked = () => setIconChange((value) => !value);
 
-
+  console.log(filterColor);
 
   const keys = ["name", "price"];
 
@@ -44,7 +49,9 @@ export default function Categoriesbar({ handler }, props) {
       <div className="relative flex justify-end mr-10 cursor-pointer ">
         <div
           className=" w-[30px h-[30px] lg:w-[50px] lg:h-[50px] bg-gray-200 rounded-full flex justify-center items-center "
-          onClick={()=> wData==='270px' ? setWData('0px'): setWData('270px')}
+          onClick={() =>
+            wData === "270px" ? setWData("0px") : setWData("270px")
+          }
         >
           <img
             src={FilterImg}
@@ -58,37 +65,58 @@ export default function Categoriesbar({ handler }, props) {
           filterPriceHandler: filterPriceHandler,
 
           setFilterColor: setFilterColor,
-          wData:wData
+          wData: wData,
         }}
       >
         <CatFilter />
       </FilterInfo.Provider>
-      
-      <div className={ wData==="270px" ?" realtive grid grid-cols-1 ml-[270px] lg:grid-cols-3 lg:ml-[300px] overflow-hidden mt-5 gap-8 transform transition-all duration-1000  ease-in-out  ":"grid grid-cols-3 lg:grid-cols-4 overflow-hidden mt-5 gap-8 transform transition-all duration-1000  ease-in-out "}>
+
+      <div
+        className={
+          wData === "270px"
+            ? " realtive grid grid-cols-1 ml-[270px] lg:grid-cols-3 lg:ml-[300px] overflow-hidden mt-5 gap-8 transform transition-all duration-1000  ease-in-out  "
+            : "grid grid-cols-3 lg:grid-cols-4 overflow-hidden mt-5 gap-8 transform transition-all duration-1000  ease-in-out "
+        }
+      >
         {filteredList.map((element, index) => {
           return (
             <>
               <NavLink to="/Product" state={element}>
-                <div className=" relative w-[130px] h-[150px] lg:w-[300px] lg:h-[300px]">
-                  <img
-                    className="  w-full h-full gap-4  object-full   group-active:hidden p-2 cursor-pointer  rounded-xl hover:shadow-xl "
+                <div className=" flex justify-center items-center flex-col w-[130px] h-[150px] lg:w-[250px] lg:h-[400px] gap-3">
+                 <div className="w-[230px] h-[200px] overflow-hidden object-contain  ">
+                 <img
+                    className="  w-full h-full group-active:hidden p-2 cursor-pointer   hover:shadow-xl "
                     src={element.image}
                     key={index}
                   />
-
-                  <div className="absolute flex   flex-row item-center justify-center h-[50px] w-[113px] lg:w-[285px]  bottom-[10px] rounded-b-lg left-2 right-0  bg-gray-800 opacity-70">
-                    <h3
-                      className="text-[13px] lg:text-md text-white font-bold ml-1 lg:ml-2"
-                      key={index}
-                    >
-                      {element.price}
-                    </h3>
-                    <h3
-                      className=" text-[12px] lg:text-md text-white font-medium lg:font-semibold ml-2"
-                      key={index}
-                    >
-                      {element.title}
-                    </h3>
+                 </div>
+                  <div className="absolute top-[70px] lg:top-[30px] mr-[100px] lg:mr-[180px]  w-[70px] h-[20px] bg-RedPrime text-[8px]  flex justify-center items-center  ">
+                    <h1 className="text-white  uppercase font-Montserrat text-[9px]">
+                      Best Seller
+                    </h1>
+                  </div>
+                  <div className="absolute top-[160px] lg:top-[210px]  w-[110px] lg:w-[160px] h-[60px] text-[10px]  lg:text-[12px] text-RedPrime font-Montserrat cursor-pointer flex justify-between items-center uppercase  transition-all">
+                    (13Review)
+                    <div>
+                      {iconChange == 0 ? (
+                        <FavoriteBorder
+                          className=" text-[10px] lg:text-[13px] text-RedPrime "
+                          onClick={toggleChecked}
+                        />
+                      ) : (
+                        <Favorite className=" text-[10px] lg:text-[13px] text-RedPrime" />
+                      )}
+                    </div>
+                  </div>
+                  <div className=" relative flex justify-center items-center flex-col w-[165px] text-center font-Montserrat mt-[10px] ">
+                    {element.title}
+                    <div className="flex justify-between gap-8 items-center flex-row mt-[7px]">
+                      <p className=" font-Montserrat text-[15px]  ">Rs.5000</p>
+                      <p className=" font-Montserrat text-[15px]  text-gray-500">
+                        Rs.{element.price}
+                      </p>
+                      <hr className=" absolute ml-[87px] h-[2px] w-[70px] bg-gray-400 t-0" />
+                    </div>
                   </div>
                 </div>
               </NavLink>

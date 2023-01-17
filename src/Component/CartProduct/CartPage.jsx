@@ -54,10 +54,10 @@ export default function CartPage() {
                     <polyline points="15 6 9 12 15 18" />
                   </svg>
 
-                  <p className="text-sm pl-2 leading-none">Back</p>
+                  <p className="text-sm pl-2 leading-none font-Montserrat">Back</p>
                 </div>
               </NavLink>
-              <p className="text-5xl font-black leading-10 text-gray-800 pt-3">
+              <p className="text-5xl font-black leading-10 text-gray-800 pt-3 font-Montserrat">
                 Jewlery
               </p>
               {PRODUCTS.map((item) => {
@@ -73,11 +73,11 @@ export default function CartPage() {
                     />
                   </div>
                   <div className="md:pl-3 md:w-3/4">
-                    <p className="text-xs leading-3 text-gray-800 md:pt-0 pt-4">
+                    <p className="text-xs leading-3 text-gray-800 md:pt-0 pt-4 font-Montserrat">
                       {item.id}
                     </p>
                     <div className="flex items-center justify-between w-full pt-1">
-                      <p className="text-base font-black leading-none text-gray-800">
+                      <p className="  font-medium leading-none text-gray-800 font-Montserrat">
                         {item.details}
                       </p>
                       <div className="flex items-center justify-center">
@@ -88,7 +88,7 @@ export default function CartPage() {
                           <Remove className="text-black text-md " />
                         </div>
                         <div className="flex items-center justify-center ">
-                          <div className="w-14 h-14  text-md text-black font-bold flex items-center justify-center shadow-md ">
+                          <div className="w-14 h-14  text-md text-black font-Montserrat flex items-center justify-center shadow-md ">
                             {count}
                           </div>
                         </div>
@@ -100,25 +100,25 @@ export default function CartPage() {
                         </div>
                       </div>
                     </div>
-                    <p className="text-xs leading-3 text-gray-600 pt-2">
+                    <p className="text-xs leading-3 text-gray-600 pt-2 font-Montserrat">
                       Height: 10 inches
                     </p>
-                    <p className="text-xs leading-3 text-gray-600 py-4">
+                    <p className="text-xs leading-3 text-gray-600 py-4 font-Montserrat">
                       Color: Black
                     </p>
-                    <p className="w-96 text-xs leading-3 text-gray-600">
+                    <p className="w-96 text-xs leading-3 text-gray-600 font-Montserrat">
                       Composition: 100% calf leather
                     </p>
-                    <div className="flex items-center justify-between pt-5 pr-6">
+                    <div className="flex items-center justify-between pt-5 pr-6 font-Montserrat">
                       <div className="flex itemms-center">
-                        <p className="text-xs leading-3 underline text-gray-800 cursor-pointer">
+                        <p className="text-xs leading-3 underline text-gray-800 cursor-pointer font-Montserrat">
                           Add to favorites
                         </p>
-                        <p className="text-xs leading-3 underline text-red-500 pl-5 cursor-pointer">
+                        <p className="text-xs leading-3 underline text-red-500 pl-5 cursor-pointer font-Montserrat">
                           Remove
                         </p>
                       </div>
-                      <p className="text-base font-black leading-none text-gray-800">
+                      <p className="text-base font-black leading-none text-gray-800 font-Montserrat">
                         {item.price}
                       </p>
                     </div>
@@ -130,34 +130,34 @@ export default function CartPage() {
             <div className="xl:w-1/3 md:w-2/3  w-full bg-gray-100 h-screen">
               <div className="flex flex-col md:h-screen px-14 py-20 justify-between overflow-y-auto">
                 <div>
-                  <p className="text-4xl font-black leading-9 text-gray-800">
+                  <p className="text-4xl font-black leading-9 text-gray-800 font-Montserrat">
                     Summary
                   </p>
                   <div className="flex items-center justify-between pt-16">
-                    <p className="text-base leading-none text-gray-800">
+                    <p className="text-base leading-none text-gray-800 font-Montserrat">
                       Subtotal
                     </p>
-                    <p className="text-base leading-none text-gray-800">
+                    <p className="text-base leading-none text-gray-800 font-Montserrat">
                       9,000
                     </p>
                   </div>
                   <div className="flex items-center justify-between pt-5">
-                    <p className="text-base leading-none text-gray-800">
+                    <p className="text-base leading-none text-gray-800 font-Montserrat">
                       Shipping
                     </p>
-                    <p className="text-base leading-none text-gray-800">30</p>
+                    <p className="text-base leading-none text-gray-800 font-Montserrat">30</p>
                   </div>
                   <div className="flex items-center justify-between pt-5">
-                    <p className="text-base leading-none text-gray-800">Tax</p>
-                    <p className="text-base leading-none text-gray-800">35</p>
+                    <p className="text-base leading-none text-gray-800 font-Montserrat">Tax</p>
+                    <p className="text-base leading-none text-gray-800 font-Montserrat">35</p>
                   </div>
                 </div>
                 <div>
                   <div className="flex items-center pb-6 justify-between lg:pt-5 pt-20">
-                    <p className="text-2xl leading-normal text-gray-800">
+                    <p className="text-2xl leading-normal text-gray-800 font-Montserrat">
                       Total
                     </p>
-                    <p className="text-2xl font-bold leading-normal text-right text-gray-800">
+                    <p className="text-2xl font-bold leading-normal text-right text-gray-800 font-Montserrat">
                       10,460
                     </p>
                   </div>
@@ -165,7 +165,7 @@ export default function CartPage() {
                   <NavLink to="/Billingtab">
                     <button
                       onClick={() => setShow(!show)}
-                      className="text-base leading-none w-full py-5 bg-gray-800 border-gray-800 border focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-white"
+                      className="text-base leading-none w-full py-5 bg-gray-800 border-gray-800 border focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-white font-Montserrat"
                     >
                       Checkout
                     </button>

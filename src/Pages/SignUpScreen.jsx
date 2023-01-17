@@ -89,12 +89,12 @@ export default function SignUpScreen() {
                   <div className="md:p-12 md:mx-6">
                     <div className="text-center">
                       <img className="mx-auto w-48" src={Logo} alt="logo" />
-                      <h4 className="text-xl font-semibold mt-1 mb-12 pb-1">
+                      <h4 className="text-xl font-Montserrat mt-1 mb-12 pb-1">
                         We are The Miraa Team
                       </h4>
                     </div>
                     <form onSubmit={handleSubmit}>
-                      <p className="mb-4">Please login to your account</p>
+                      <p className="mb-4 font-Montserrat">Please login to your account</p>
 
                       {inputs.map((input) => (
                         <FormInput
@@ -106,7 +106,7 @@ export default function SignUpScreen() {
                       ))}
                       <div className="text-center pt-1 mb-12 pb-1">
                         <button
-                          className="inline-block px-6 py-2.5 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full mb-3 none bg-gradient-to-r from-amber-500 to-pink-500"
+                          className="inline-block px-6 py-2.5 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full mb-3 none bg-gradient-to-r font-Montserrat from-amber-500 to-pink-500"
                           type="button"
                           data-mdb-ripple="true"
                           data-mdb-ripple-color="light"

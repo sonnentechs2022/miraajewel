@@ -16,12 +16,12 @@ export default function () {
                     <div className="md:p-12 md:mx-6">
                       <div className="text-center">
                         <img className="mx-auto w-48 md:w-20" src={Logo} alt="logo" />
-                        <h4 className="text-xl font-semibold mt-1 mb-12 pb-1">
+                        <h4 className="text-xl font-Montserrat mt-1 mb-12 pb-1">
                           We are The Miraa Team
                         </h4>
                       </div>
                       <form>
-                        <p className="mb-4">Please login to your account</p>
+                        <p className="mb-4 font-Montserrat">Please login to your account</p>
                         <div className="mb-4">
                           <input
                             type="text"
@@ -40,23 +40,23 @@ export default function () {
                         </div>
                         <div className="text-center pt-1 mb-12 pb-1">
                           <button
-                            className="inline-block px-6 py-2.5 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full mb-3 none bg-gradient-to-r from-amber-500 to-pink-500"
+                            className="inline-block font-Montserrat  px-6 py-2.5 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full mb-3 none bg-gradient-to-r from-amber-500 to-pink-500"
                             type="button"
                             data-mdb-ripple="true"
                             data-mdb-ripple-color="light"
                           >
                             Log in
                           </button>
-                          <a className="text-gray-500" href="#!">
+                          <a className="text-gray-500 font-Montserrat" href="#!">
                             Forgot password?
                           </a>
                         </div>
                         <div className="flex items-center justify-between pb-6 ">
-                          <p className="mb-0 mr-2">Don't have an account?</p>
+                          <p className="mb-0 mr-2 font-Montserrat">Don't have an account?</p>
                           <NavLink to="/SignUp">
                           <button
                             type="button"
-                            className="inline-block px-6 py-2 border-2 border-red-600 text-red-600 font-medium text-xs leading-tight uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out "
+                            className="inline-block px-6 font-Montserrat py-2 border-2 border-red-600 text-red-600 font-medium text-xs leading-tight uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out "
                             data-mdb-ripple="true"
                             data-mdb-ripple-color="light"
                           >

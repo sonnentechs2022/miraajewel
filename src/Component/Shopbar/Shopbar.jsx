@@ -14,6 +14,7 @@ import Collection from "../Collection/Colection";
 import DealBar from "../DealDayBar/DealBar";
 import ShopColor from "../ShopByColor/ShopColor";
 import Banner from "../BannerBar/Banner";
+import demoImg from '../../Assets/CP 001 005/IMG_4876.JPG'
 
 export default function Shopbar() {
   const [bgImages, setBgImages] = useState(0);
@@ -77,7 +78,7 @@ export default function Shopbar() {
           <NavLink to="/Categoriesbar">
             <div
               id="slider"
-              className=" w-full grid grid-cols-7 grid-row-1 gap-1 lg:gap-3 lg:pl-1 lg:pr-1 rounded"
+              className=" w-full grid grid-cols-7 grid-row-1 gap-1 lg:gap-1 lg:pl-1 lg:pr-1 rounded"
             >
               {PRODUCT.map((item, index) => {
                 return (
@@ -87,7 +88,7 @@ export default function Shopbar() {
                         className="  w-[80px] h-[80px] lg:w-[178px] lg:h-[170px]  object-cover group-active:hidden  cursor-pointer   "
                         src={item.image}
                       />
-                      <div className="flex  flex-col justify-center items-center  w-[51px] h-[40px]  lg:w-[170px] bottom-[3px] lg:bottom-[2px]  bg- bg-white  lg:h-[60px] border-[2px] object-cover">
+                      <div className="flex  flex-col justify-center items-center  w-[51px] h-[40px]  lg:w-[176px] bottom-[3px] lg:bottom-[2px]  bg- bg-white  lg:h-[60px] border-[2px] object-cover">
                         <h3
                           className=" text-[10px] lg:text-[13px]  text-RedPrime lg:text-md  font-Montserrat  "
                           key={index}

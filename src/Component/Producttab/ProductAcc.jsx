@@ -10,13 +10,13 @@ export default function ProductAcc({ Brand, Color, Head, id }) {
         className=" w-full flex-col items-center justify-center accordian "
         id="accordionExample"
       >
-        <div className=" flex justify-center w-5/6 max-h-full  border border-gray-400 ">
+        <div className=" flex justify-center w-full max-h-full  border-b border-t border-gray-100 mt-[30px] ">
           <div
-            className=" flex flex-col w-11/12 ransition-all "
+            className=" flex flex-col w-11/12 transition-all "
             onClick={() => setIsActive(!isActive)}
             key={id}
           >
-            <div className="flex justify-between  items-center  h-[35px]">
+            <div className="flex justify-between  items-center  h-[60px]">
               <h1 className="text-black font-semibold font-Montserrat text-lg hover:text-blue-500 transition ease-in-out duration-500">{Head}</h1>
               <div className=" ">
                 {isActive ? (

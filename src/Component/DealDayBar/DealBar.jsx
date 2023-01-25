@@ -2,11 +2,16 @@ import React, { useState } from "react";
 import img from "../../Assets/Product/10.jpg";
 import { FavoriteBorder, Favorite } from "@mui/icons-material";
 import Ring from "../../Assets/PaymentOption/Rings.jpg";
+import DemoImg from '../../Assets/CP 001 020/New_01.jpg'
+import Demo2 from '../../Assets/RI 001 018/IMG_3075.jpg'
+import Demo3 from '../../Assets/RI 001 018/IMG_3079.jpg'
+import Demo4 from '../../Assets/RI 001 018/IMG_3091.jpg'
+import DealSub from "./DealSub";
 
 const data = [
   {
     id: 1,
-    img: Ring,
+    img: DemoImg,
     Review: "(12) Review",
     title:'Shruti Haasan Silver Classic Solitaire Ring',
     Price:'8200',
@@ -15,7 +20,7 @@ const data = [
   },
   {
     id: 2,
-    img: Ring,
+    img: Demo2,
     Review: "(12) Review",
     title:'Shruti Haasan Silver Classic Solitaire Ring',
     Price:'8200',
@@ -23,7 +28,7 @@ const data = [
   },
   {
     id: 3,
-    img: Ring,
+    img: Demo3,
     Review: "(12) Review",
     title:'Shruti Haasan Silver Classic Solitaire Ring',
     Price:'8200',
@@ -31,7 +36,7 @@ const data = [
   },
   {
     id: 4,
-    img: Ring,
+    img: Demo4,
     Review: "(12) Review",
     title:'Shruti Haasan Silver Classic Solitaire Ring',
     Price:'8200',
@@ -44,51 +49,35 @@ export default function DealBar() {
     height: "0px",
     opacity: "0",
   });
-  const [iconChange, setIconChange] = useState(false);
+  const [active, setActive] = useState(false);
+  const [proData,setProData]=useState(data)
 
-  const toggleChecked = () => setIconChange((value) => !value);
+  const handleChangeActive = () => {
+    setActive((previousStar) => {
+      return !previousStar;
+    });
+  };
 
   return (
     <>
-    <div className="flex flex-row justify-between">
-      {data.map((item) => {
+     <div className="flex flex-col items-center justify-center ">
+      <h1 className="  text-[20px] lg:text-[30px]  text-black font-Montserrat   uppercase mt-5">
+        Deal of The Day
+      </h1>
+    <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 ">
+      {proData.map((item) => {
         return (
-        <div className="relative flex flex-col justify-center items-center overflow-hidden bg-no-repeat bg-cover h-[240px] lg:h-[350px]">
-          <img
-            src={item.img}
-            key={item.id}
-            alt="hello"
-            className=" object-fill mt-24 lg:mt-0 lg:h-60 h-[175px]"
-          />
-          <div className="absolute top-[70px] lg:top-[50px] mr-[80px] lg:mr-[140px]  w-[70px] h-[20px] bg-RedPrime text-[8px]  flex justify-center items-center  ">
-            <h1 className="text-white  uppercase font-Montserrat text-[9px]">
-              Best Seller
-            </h1>
-          </div>
-          <div className="absolute top-[160px] lg:top-[210px]  w-[110px] lg:w-[160px] h-[60px] text-[10px]  lg:text-[12px] text-RedPrime font-Montserrat cursor-pointer flex justify-between items-center uppercase  transition-all">
-            (13Review)
-            <div>
-              {iconChange == 0 ? (
-                <FavoriteBorder
-                  className=" text-[10px] lg:text-[13px] text-RedPrime "
-                  onClick={toggleChecked}
-                />
-              ) : (
-                <Favorite className=" text-[10px] lg:text-[13px] text-RedPrime" />
-              )}
-            </div>
-          </div>
-          <div className=" relative flex justify-center items-center flex-col w-[165px] text-center font-Montserrat mt-[15px]">
-            {item.title}
-            <div className="flex justify-between gap-8 items-center flex-row mt-[7px]">
-              <p className=" font-Montserrat text-[15px] ">Rs.{item.offerPrice}</p>
-              <p className=" font-Montserrat text-[15px]  text-gray-500">RS.{item.Price}</p>
-              <hr className=" absolute ml-[87px] h-[2px] w-[70px] bg-gray-700 t-0" />
-            </div>
-          </div>
-        </div>
+        <DealSub
+        img={item.img}
+        Price={item.Price}
+        Review={item.Review}
+        offerPrice={item.offerPrice}
+        title={item.title}
+        id={item.id}
+        />
         )
       })}
+      </div>
       </div>
     </>
   );

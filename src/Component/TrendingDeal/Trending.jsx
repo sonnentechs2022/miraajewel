@@ -3,12 +3,15 @@ import Ring from "../../Assets/PaymentOption/Rings.jpg";
 import TrendingItems from "./TrendingItems";
 import LeftIcon from "../../Assets/Icons/icons8-more-than-50.png";
 import RightIcon from "../../Assets/Icons/icons8-less-than-50.png";
+import DemoImg from '../../Assets/RI 001 018/IMG_3071.jpg'
+import Demo2 from '../../Assets/RI 001 018/IMG_3075.jpg'
+import Demo3 from '../../Assets/RI 001 018/IMG_3079.jpg'
 
 const a = ["⭐", "⭐", "⭐", "⭐", "⭐"];
 export default function Trending() {
   const data = [
     {
-      img: Ring,
+      img: DemoImg,
       Review: "(12) Review",
       Rating: a,
       title: "Shruti Haasan Silver Classic ",
@@ -16,7 +19,7 @@ export default function Trending() {
       offerPrice: "2200",
     },
     {
-      img: Ring,
+      img: Demo2,
       Review: "(12) Review",
       Rating: a,
       title:'Shruti Haasan Silver Classic ',
@@ -24,7 +27,7 @@ export default function Trending() {
       offerPrice:'2200'
     },
     {
-      img: Ring,
+      img: Demo3,
       Review: "(12) Review",
       Rating: a,
       title:'Shruti Haasan Silver Classic ',
@@ -32,7 +35,7 @@ export default function Trending() {
       offerPrice:'2200'
     },
     {
-      img: Ring,
+      img: DemoImg,
       Review: "(12) Review",
       Rating: a,
       title:'Shruti Haasan Silver Classic ',
@@ -40,7 +43,7 @@ export default function Trending() {
       offerPrice:'2200'
     },
     {
-      img: Ring,
+      img: DemoImg,
       Review: "(12) Review",
       Rating: a,
       title:'Shruti Haasan Silver Classic  ',
@@ -50,6 +53,7 @@ export default function Trending() {
   ];
 
   const [heightVal, setHeightVal] = useState("0px");
+ 
 
   const handleOver = (e) => {
     console.log(e.style);
@@ -60,10 +64,10 @@ export default function Trending() {
       <h1 className="  text-[20px] lg:text-[30px]  text-black font-Montserrat   uppercase mt-5">
         Trending products
       </h1>
-      <div className="flex flex-row  items-center justify-center ">
+      <div className="flex flex-row  items-center justify-center w-screen ">
         <img
           src={RightIcon}
-          className=" h-[50px] w-[20px] lg:h-[80px] lg:w-[30px] cursor-pointer"
+          className=" h-[50px] w-[20px] lg:h-[50px] lg:w-[20px] lg:mb-[50px]  cursor-pointer"
           alt=""
         />
         <div className="relative overflow-x-scroll scroll  scroll-smooth whitespace-nowrap overflow-auto scrollbar-hide gap-2 ">
@@ -85,7 +89,7 @@ export default function Trending() {
 
         <img
           src={LeftIcon}
-          className="h-[50px] w-[20px] lg:h-[80px] lg:w-[30px] cursor-pointer"
+          className="h-[50px] w-[20px] lg:h-[50px] lg:w-[20px] lg:mb-[50px] cursor-pointer"
           alt=""
         />
       </div>

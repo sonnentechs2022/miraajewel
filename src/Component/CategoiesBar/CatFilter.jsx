@@ -34,7 +34,7 @@ export default function CatFilter() {
   return (
     <>
       <div
-        className="sidebar fixed  top-0 bottom-0 lg:left-0 z-40  lg:w-[300px]  text-center bg-gray-900 transform transition-all duration-1000  ease-in-out "
+        className="sidebar fixed  top-0 bottom-0 lg:left-0   lg:w-[300px]  text-center bg-gray-900 transform transition-all duration-1000  ease-in-out t-0 mt-[125px] "
         style={{ width: wData }}
       >
         <div className="max-h-screen overflow-y-scroll snap snap-y snap-mandatory scrollbar-hide ">

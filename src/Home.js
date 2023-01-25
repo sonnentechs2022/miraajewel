@@ -31,18 +31,23 @@ export default function Home() {
       })
       .then((data) => {
         setData(data);
-        
       });
   }, []);
+
+  useEffect(() => {
+    window.history.scrollRestoration = 'manual'
+  }, []);
+  
   return (
     <>
       <BrowserRouter>
         <ScrollToTop />
         <Topbar />
         <Navtab2 />
+
         <Routes>
-          <Route path="/" element={<Shopbar />} />
-          <Route path="/" element={<ProductCate />} />
+          <Route path="/version2" element={<Shopbar />} />
+          <Route path="/ProductCate" element={<ProductCate />} />
           <Route path="/ContactUs" element={<ContactUs />} />
           <Route path="/CartPage" element={<CartPage />} />
           <Route path="/Billingtab" element={<Billingtab />} />

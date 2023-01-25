@@ -17,9 +17,11 @@ module.exports = {
       colors:{
         'RedPrime':'rgb(253, 90, 46)',
         'GoldSec':'#ffdde4',
-        'GoldTer':'#A2B5BB',
+        'GoldTer':'#FAECD6',
         'FooterBg':'#EAE0DA',
-      'Testimonial':'#f6f7f9;'
+      'Testimonial':'#f6f7f9;',
+      'RedPro':'#850000',
+      'GrayPrime':'#444444'
       }
       
     },

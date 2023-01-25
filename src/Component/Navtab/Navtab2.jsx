@@ -26,7 +26,7 @@ export default function Navtab2() {
       <nav className="bg-white w-full sticky -top-1 z-30" id="demo">
         <div className="flex items-center font-medium justify-around relative z-10">
           <div className=" p-3 md:w-auto w-full flex justify-between   ">
-            <Link to="">
+            <Link to="/version2">
               <img src={Logo} alt="logo" className="md:cursor-pointer h-10 " />
             </Link>
             <div className="text-2xl md:hidden" onClick={() => setOpen(!open)}>
@@ -36,7 +36,7 @@ export default function Navtab2() {
           <ul className="md:flex hidden  items-center  text-black-1200 ml-[25px]  lg:ml-[60px] ">
             <li>
               <Link
-                to=""
+                to="/version2"
                 className="py-5 px-3 inline-block font-sm  font-Montserrat  "
               >
                 Home
